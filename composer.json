@@ -1,0 +1,23 @@
+{
+  "name": "treo-module/treo-crm",
+  "description": "TreoCRM",
+  "authors": [
+    {
+      "name": "Roman Ratsun",
+      "email": "r.ratsun@treolabs.com"
+    }
+  ],
+  "require": {
+    "treolabs/treocore": "^3.12.0",
+    "treo-module/espocrm": "^1.0.3"
+  },
+  "extra": {
+    "treoId": "TreoCrm",
+    "name": {
+      "default": "TreoCRM"
+    },
+    "description": {
+      "default": "-"
+    }
+  }
+}

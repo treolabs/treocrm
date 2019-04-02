@@ -1,0 +1,5 @@
+{
+    "views": {
+        "list": "treo-crm:views/report-panel/list"
+    }
+}

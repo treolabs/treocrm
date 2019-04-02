@@ -1,0 +1,10 @@
+{
+  "links": {
+    "contacts": {
+      "layoutRelationshipsDisabled": true
+    },
+    "leads": {
+      "layoutRelationshipsDisabled": true
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+    "modalViews": {
+        "select": "views/modals/select-records"
+    }
+}
