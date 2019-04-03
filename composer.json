@@ -1,6 +1,8 @@
 {
   "name": "treo-module/treo-crm",
   "description": "TreoCRM",
+  "homepage": "https://treolabs.com",
+  "license": "GPL-3.0-only",
   "authors": [
     {
       "name": "Roman Ratsun",
