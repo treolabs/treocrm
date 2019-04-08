@@ -1,0 +1,13 @@
+{
+  "fields": {
+    "campaigns": {
+      "exportDisabled": true
+    },
+    "includingActionList": {
+      "exportDisabled": true
+    },
+    "excludingActionList": {
+      "exportDisabled": true
+    }
+  }
+}

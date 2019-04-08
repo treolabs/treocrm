@@ -1,0 +1,22 @@
+{
+  "fields": {
+    "campaign": {
+      "exportDisabled": true
+    },
+    "targetLists": {
+      "exportDisabled": true
+    },
+    "targetList": {
+      "exportDisabled": true
+    },
+    "createdAccount": {
+      "exportDisabled": true
+    },
+    "createdContact": {
+      "exportDisabled": true
+    },
+    "createdOpportunity": {
+      "exportDisabled": true
+    }
+  }
+}
