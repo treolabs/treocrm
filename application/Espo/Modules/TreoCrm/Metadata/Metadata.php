@@ -38,46 +38,8 @@ class Metadata extends \Treo\Metadata\AbstractMetadata
      */
     public function modify(array $data): array
     {
-        // hide dashlets
-        $data = $this->hideDashlets($data);
-
         // prepare Product if Advanced installed
         $data = $this->prepareProduct($data);
-
-        return $data;
-    }
-
-    /**
-     * Hide Espo dashlets
-     *
-     * @param array $data
-     *
-     * @return array
-     */
-    protected function hideDashlets(array $data): array
-    {
-        // prepare dashlets
-        $dashlets = [
-            'Activities',
-            'Calls',
-            'Cases',
-            'Emails',
-            'Leads',
-            'Meetings',
-            'Opportunities',
-            'Tasks',
-            'OpportunitiesByLeadSource',
-            'OpportunitiesByStage',
-            'SalesByMonth',
-            'SalesPipeline'
-        ];
-
-        foreach ($dashlets as $dashlet) {
-            if (isset($data['dashlets'][$dashlet])) {
-                $data['hidedDashlets'][$dashlet] = $data['dashlets'][$dashlet];
-                unset($data['dashlets'][$dashlet]);
-            }
-        }
 
         return $data;
     }
