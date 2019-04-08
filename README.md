@@ -86,7 +86,7 @@ We are working on documentation. The current version is available [here](https:/
 * PHP 7.1 or above (with pdo_mysql, openssl, json, zip, gd, mbstring, xml, curl,exif extensions)
 * MySQL 5.5.3 or above
 
-See [Server Configuration](https://github.com/treolabs/treocore/docs/en/administration/server-configuration.md) article for more information.
+See [Server Configuration](https://github.com/treolabs/treocore/blob/master/docs/en/administration/server-configuration.md) article for more information.
 
 ### Installation
 To create your new TreoCRM application, first make sure you're using PHP 7.1 or above and have [Composer](https://getcomposer.org/) installed. 
