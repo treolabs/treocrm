@@ -91,9 +91,18 @@ See [Server Configuration](https://github.com/treolabs/treocore/blob/master/docs
 ### Installation
 To create your new TreoCRM application, first make sure you're using PHP 7.1 or above and have [Composer](https://getcomposer.org/) installed. 
 
-1. Create your new project by running:
+1. Create your new project by running few commands:
    ```
    composer create-project treolabs/treocore my-treocrm-project
+   ```
+   ```
+   cd my-treocrm-project
+   ```
+   ```
+   /usr/bin/php console.php composer require treo-module/treo-crm
+   ```
+   ```
+   /usr/bin/php composer.phar update
    ```
 2. Make cron handler files executable:
    ```
@@ -101,13 +110,12 @@ To create your new TreoCRM application, first make sure you're using PHP 7.1 or 
    ```
 3. Configure crontab:
    ```
-   * * * * * cd /var/www/my-treocrm-project; ./bin/cron.sh process-treocrm-1 /usr/bin/php 
+   * * * * * cd /var/www/my-treocrm-project; ./bin/cron.sh process-treocrm /usr/bin/php 
    ```
    - **/var/www/my-treocrm-project** - path to project root
-   - **process-treocrm-1** - an unique id of process. You should use different process id if you have few TreoPIM projects in one server
+   - **process-treocrm** - an unique id of process. You should use different process id if you have few TreoPIM projects in one server
    - **/usr/bin/php** - PHP7.1 or above
-4. Install TreoCore by following installation wizard in web interface. Just go to http://YOUR_PROJECT/
-5. Install TreoCRM module by ModuleManager
+4. Install TreoCRM by following installation wizard in web interface. Just go to http://YOUR_PROJECT/
 
 ### License
 
