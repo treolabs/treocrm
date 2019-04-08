@@ -1,0 +1,16 @@
+{
+  "fields": {
+    "account": {
+      "exportDisabled": true
+    },
+    "contacts": {
+      "exportDisabled": true
+    },
+    "campaign": {
+      "exportDisabled": true
+    },
+    "originalLead": {
+      "exportDisabled": true
+    }
+  }
+}

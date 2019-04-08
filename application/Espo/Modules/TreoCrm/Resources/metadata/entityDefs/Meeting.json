@@ -1,4 +1,18 @@
 {
+  "fields": {
+    "reminders": {
+      "exportDisabled": true
+    },
+    "users": {
+      "exportDisabled": true
+    },
+    "contacts": {
+      "exportDisabled": true
+    },
+    "leads": {
+      "exportDisabled": true
+    }
+  },
   "links": {
     "contacts": {
       "layoutRelationshipsDisabled": true
