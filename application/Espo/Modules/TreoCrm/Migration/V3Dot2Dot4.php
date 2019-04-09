@@ -22,19 +22,29 @@ declare(strict_types=1);
 namespace Treo\Migration;
 
 /**
- * Version 2.2.1
+ * Version 3.2.4
  *
- * @author r.ratsun@zinitsolutions.com
+ * @author o.trelin@treolabs.com
  */
-class V2Dot2Dot1 extends \Treo\Core\Migration\AbstractMigration
+class V3Dot2Dot4 extends \Treo\Core\Migration\AbstractMigration
 {
     /**
      * Up to current
      */
     public function up(): void
     {
-        if (file_exists('data/espo-version.json')) {
-            unlink('data/espo-version.json');
-        }
+        // get config
+        $config = $this->getConfig();
+
+        // set empty options
+        $config->set('tabList', []);
+        $config->set('quickCreateList', []);
+        $config->set('twoLevelTabList', []);
+
+        // unset flag
+        $config->set('isCrmMenuPushed', false);
+
+        // save
+        $config->save();
     }
 }
