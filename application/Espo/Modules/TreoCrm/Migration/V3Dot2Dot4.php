@@ -19,7 +19,7 @@
  */
 declare(strict_types=1);
 
-namespace Treo\Migration;
+namespace Espo\Modules\TreoCrm\Migration;
 
 /**
  * Version 3.2.4
