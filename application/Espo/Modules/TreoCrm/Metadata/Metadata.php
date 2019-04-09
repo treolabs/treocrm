@@ -57,14 +57,18 @@ class Metadata extends \Treo\Metadata\AbstractMetadata
             // prepare items
             $items = [
                 'Account',
-                'Calendar',
-                'Call',
-                'Case',
-                'Campaign',
-                'Document',
+                'Contact',
                 'Lead',
+                'Opportunity',
+                'Case',
+                'Email',
+                'Calendar',
                 'Meeting',
+                'Call',
                 'Task',
+                'Document',
+                'Campaign',
+                'User',
             ];
 
             // get config data
