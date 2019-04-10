@@ -20,7 +20,7 @@
 
 declare(strict_types=1);
 
-namespace Espo\Modules\TreoCRM\Metadata;
+namespace Espo\Modules\TreoCrm\Metadata;
 
 /**
  * Class Metadata
