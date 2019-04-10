@@ -10,8 +10,8 @@
     }
   ],
   "require": {
-    "treolabs/treocore": "^3.12.0",
-    "treo-module/espocrm": "^1.1.0"
+    "treolabs/treocore": "^3.13.0",
+    "treo-module/espocrm": "^1.2.0"
   },
   "extra": {
     "treoId": "TreoCrm",
