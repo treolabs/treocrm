@@ -38,9 +38,9 @@ The following modules are available for TreoCRM:
 * Data Export Feeds
 * Lead Miner
 * Lead Qualifications
-* EspoCRM Microsoft Outlook Connector for Exchange Server
-* EspoCRM Microsoft Outlook Connector for Office 365 and Exchange Online
-* EspoCRM Multichannel Communication
+* Microsoft Outlook Connector for Exchange Server
+* Microsoft Outlook Connector for Office 365 and Exchange Online
+* Multichannel Communication
 * Product Information Management (with a lot of extensions).
 
 Please contact us, if you want to get any of them. Please consider these all are paid modules.
