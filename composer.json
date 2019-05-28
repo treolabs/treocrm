@@ -19,7 +19,11 @@
       "default": "TreoCRM"
     },
     "description": {
-      "default": "-"
-    }
+      "default": "The module enables to organize and plan sales and marketing (leads, opportunities, target lists)"
+    },
+    "tags": [
+      "manage",
+      "planning"
+    ]
   }
 }
