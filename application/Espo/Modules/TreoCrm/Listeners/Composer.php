@@ -22,21 +22,24 @@ declare(strict_types=1);
 
 namespace Espo\Modules\TreoCrm\Listeners;
 
+use Treo\Listeners\AbstractListener;
+use Treo\Core\EventManager\Event;
+
 /**
  * Class Composer
  *
  * @author o.trelin <o.trelin@treolabs.com>
  */
-class Composer extends \Treo\Listeners\AbstractListener
+class Composer extends AbstractListener
 {
     /**
      * After install module event
      *
-     * @param array $data
+     * @param Event $event
      */
-    public function afterInstallModule(array $data): void
+    public function afterInstallModule(Event $event): void
     {
-        if (!empty($data['id']) && $data['id'] == 'TreoCrm') {
+        if (!empty($event->getArgument('id')) && $event->getArgument('id') == 'TreoCrm') {
             $this->addDashlets();
             $this->addGlobalSearchEntities();
         }
@@ -45,14 +48,11 @@ class Composer extends \Treo\Listeners\AbstractListener
     /**
      * After update module event
      *
-     * @param array $data
+     * @param Event $event
      */
-    public function afterUpdateModule(array $data): void
+    public function afterUpdateModule(Event $event): void
     {
-        if (!empty($data['id']) && $data['id'] == 'TreoCrm') {
-            $this->addDashlets();
-            $this->addGlobalSearchEntities();
-        }
+        $this->afterInstallModule($event);
     }
 
     /**
