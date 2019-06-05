@@ -32,12 +32,58 @@ use Treo\Composer\AbstractEvent;
 class Event extends AbstractEvent
 {
     /**
+     * @var array
+     */
+    protected $dashlets
+        = [
+            "stream",
+            "activities"
+        ];
+
+    /**
+     * @var array
+     */
+    protected $searchEntities
+        = [
+            'Account',
+            'Contact',
+            'Lead',
+            'Opportunity'
+        ];
+
+    /**
+     * @var array
+     */
+    protected $menuItems
+        = [
+            'Account',
+            'Contact',
+            'Lead',
+            'Opportunity',
+            'Case',
+            'Email',
+            'Calendar',
+            'Meeting',
+            'Call',
+            'Task',
+            'Document',
+            'Campaign',
+            'User'
+        ];
+
+    /**
      * @inheritdoc
      */
     public function afterInstall(): void
     {
+        // add dashlets
         $this->addDashlets();
+
+        // add global search
         $this->addGlobalSearchEntities();
+
+        // add menu items
+        $this->addMenuItems();
     }
 
     /**
@@ -45,6 +91,14 @@ class Event extends AbstractEvent
      */
     public function afterDelete(): void
     {
+        // delete dashlets
+        $this->deleteDashlets();
+
+        // delete global search
+        $this->deleteGlobalSearchEntities();
+
+        // delete menu items
+        $this->deleteMenuItems();
     }
 
     /**
@@ -58,27 +112,57 @@ class Event extends AbstractEvent
         // get config data
         $dashboardLayout = $config->get('dashboardLayout', []);
 
-        foreach ($dashboardLayout as $k => $v) {
-            if (empty($v->layout)) {
-                $dashboardLayout[$k]->layout = [
-                    0 => (object)[
-                        'id'     => 'default-stream',
-                        'name'   => 'Stream',
-                        'x'      => 0,
-                        'y'      => 0,
-                        'width'  => 2,
-                        'height' => 4
-                    ],
-                    1 => (object)[
-                        'id'     => 'default-activities',
-                        'name'   => 'Activities',
-                        'x'      => 2,
-                        'y'      => 0,
-                        'width'  => 2,
-                        'height' => 4
-                    ]
+        if (!isset($dashboardLayout[0])) {
+            $dashboardLayout[0] = (object)[
+                'name'   => 'My Treo',
+                'layout' => []
+            ];
+        }
+
+        $exists = [];
+        foreach ($dashboardLayout[0]->layout as $item) {
+            $exists[] = $item->id;
+        }
+
+        foreach ($this->dashlets as $dashlet) {
+            if (!in_array('default-' . $dashlet, $exists)) {
+                $dashboardLayout[0]->layout[] = (object)[
+                    'id'     => 'default-' . $dashlet,
+                    'name'   => ucfirst($dashlet),
+                    'x'      => 0,
+                    'y'      => 0,
+                    'width'  => 2,
+                    'height' => 4
                 ];
             }
+        }
+
+        // set to config
+        $config->set('dashboardLayout', $dashboardLayout);
+
+        // save
+        $config->save();
+    }
+
+    /**
+     * Delete default dashlets
+     */
+    protected function deleteDashlets(): void
+    {
+        // get config
+        $config = $this->getContainer()->get('config');
+
+        // get config data
+        $dashboardLayout = $config->get('dashboardLayout', []);
+
+        if (!empty($dashboardLayout[0]->layout)) {
+            $data = [];
+            foreach ($dashboardLayout[0]->layout as $item) {
+                if (!in_array(str_replace("default-", "", $item->id), $this->dashlets)) {
+                    $data[] = $item;
+                }
+            }
+            $dashboardLayout[0]->layout = $data;
         }
 
         // set to config
@@ -96,18 +180,10 @@ class Event extends AbstractEvent
         // get config
         $config = $this->getContainer()->get('config');
 
-        // search entities
-        $entities = [
-            'Account',
-            'Contact',
-            'Lead',
-            'Opportunity',
-        ];
-
         // get config data
         $globalSearchEntityList = $config->get("globalSearchEntityList", []);
 
-        foreach ($entities as $entity) {
+        foreach ($this->searchEntities as $entity) {
             if (!in_array($entity, $globalSearchEntityList)) {
                 $globalSearchEntityList[] = $entity;
             }
@@ -115,6 +191,106 @@ class Event extends AbstractEvent
 
         // set to config
         $config->set('globalSearchEntityList', $globalSearchEntityList);
+
+        // save
+        $config->save();
+    }
+
+    /**
+     * Delete global search entities
+     */
+    protected function deleteGlobalSearchEntities(): void
+    {
+        // get config
+        $config = $this->getContainer()->get('config');
+
+        $globalSearchEntityList = [];
+        foreach ($config->get("globalSearchEntityList", []) as $entity) {
+            if (!in_array($entity, $this->searchEntities)) {
+                $globalSearchEntityList[] = $entity;
+            }
+        }
+
+        // set to config
+        $config->set('globalSearchEntityList', $globalSearchEntityList);
+
+        // save
+        $config->save();
+    }
+
+
+    /**
+     * Add menu items
+     */
+    protected function addMenuItems()
+    {
+        // get config
+        $config = $this->getContainer()->get('config');
+
+        // get config data
+        $tabList = $config->get("tabList", []);
+        $quickCreateList = $config->get("quickCreateList", []);
+        $twoLevelTabList = $config->get("twoLevelTabList", []);
+
+        foreach ($this->menuItems as $item) {
+            if (!in_array($item, $tabList)) {
+                $tabList[] = $item;
+            }
+            if (!in_array($item, $quickCreateList)) {
+                $quickCreateList[] = $item;
+            }
+            if (!in_array($item, $twoLevelTabList)) {
+                $twoLevelTabList[] = $item;
+            }
+        }
+
+        // set to config
+        $config->set('tabList', $tabList);
+        $config->set('quickCreateList', $quickCreateList);
+        $config->set('twoLevelTabList', $twoLevelTabList);
+
+        if ($config->get('applicationName') == 'TreoCore') {
+            $config->set('applicationName', 'TreoCRM');
+        }
+
+        // save
+        $config->save();
+    }
+
+    /**
+     * Delete menu items
+     */
+    protected function deleteMenuItems()
+    {
+        // get config
+        $config = $this->getContainer()->get('config');
+
+        // for tabList
+        $tabList = [];
+        foreach ($config->get("tabList", []) as $entity) {
+            if (!in_array($entity, $this->menuItems)) {
+                $tabList[] = $entity;
+            }
+        }
+        $config->set('tabList', $tabList);
+
+        // for quickCreateList
+        $quickCreateList = [];
+        foreach ($config->get("quickCreateList", []) as $entity) {
+            if (!in_array($entity, $this->menuItems)) {
+                $quickCreateList[] = $entity;
+            }
+        }
+        $config->set('quickCreateList', $quickCreateList);
+
+        // for twoLevelTabList
+        $twoLevelTabList = [];
+        foreach ($config->get("twoLevelTabList", []) as $entity) {
+            if (!in_array($entity, $this->menuItems)) {
+                $twoLevelTabList[] = $entity;
+            }
+        }
+        $config->set('twoLevelTabList', $twoLevelTabList);
 
         // save
         $config->save();
