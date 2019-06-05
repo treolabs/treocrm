@@ -20,39 +20,31 @@
 
 declare(strict_types=1);
 
-namespace Espo\Modules\TreoCrm\Listeners;
+namespace Treo\ModuleManagerEvents\TreoCRM;
 
-use Treo\Listeners\AbstractListener;
-use Treo\Core\EventManager\Event;
+use Treo\Composer\AbstractEvent;
 
 /**
- * Class Composer
+ * Class Event
  *
- * @author o.trelin <o.trelin@treolabs.com>
+ * @author r.ratsun <r.ratsun@treolabs.com>
  */
-class Composer extends AbstractListener
+class Event extends AbstractEvent
 {
     /**
-     * After install module event
-     *
-     * @param Event $event
+     * @inheritdoc
      */
-    public function afterInstallModule(Event $event): void
+    public function afterInstall(): void
     {
-        if (!empty($event->getArgument('id')) && $event->getArgument('id') == 'TreoCrm') {
-            $this->addDashlets();
-            $this->addGlobalSearchEntities();
-        }
+        $this->addDashlets();
+        $this->addGlobalSearchEntities();
     }
 
     /**
-     * After update module event
-     *
-     * @param Event $event
+     * @inheritdoc
      */
-    public function afterUpdateModule(Event $event): void
+    public function afterDelete(): void
     {
-        $this->afterInstallModule($event);
     }
 
     /**
@@ -60,26 +52,29 @@ class Composer extends AbstractListener
      */
     protected function addDashlets(): void
     {
+        // get config
+        $config = $this->getContainer()->get('config');
+
         // get config data
-        $dashboardLayout = $this->getConfig()->get('dashboardLayout', []);
+        $dashboardLayout = $config->get('dashboardLayout', []);
 
         foreach ($dashboardLayout as $k => $v) {
             if (empty($v->layout)) {
                 $dashboardLayout[$k]->layout = [
-                    0 => (object) [
-                        'id' => 'default-stream',
-                        'name' => 'Stream',
-                        'x' => 0,
-                        'y' => 0,
-                        'width' => 2,
+                    0 => (object)[
+                        'id'     => 'default-stream',
+                        'name'   => 'Stream',
+                        'x'      => 0,
+                        'y'      => 0,
+                        'width'  => 2,
                         'height' => 4
                     ],
-                    1 => (object) [
-                        'id' => 'default-activities',
-                        'name' => 'Activities',
-                        'x' => 2,
-                        'y' => 0,
-                        'width' => 2,
+                    1 => (object)[
+                        'id'     => 'default-activities',
+                        'name'   => 'Activities',
+                        'x'      => 2,
+                        'y'      => 0,
+                        'width'  => 2,
                         'height' => 4
                     ]
                 ];
@@ -87,10 +82,10 @@ class Composer extends AbstractListener
         }
 
         // set to config
-        $this->getConfig()->set('dashboardLayout', $dashboardLayout);
+        $config->set('dashboardLayout', $dashboardLayout);
 
         // save
-        $this->getConfig()->save();
+        $config->save();
     }
 
     /**
@@ -98,6 +93,9 @@ class Composer extends AbstractListener
      */
     protected function addGlobalSearchEntities(): void
     {
+        // get config
+        $config = $this->getContainer()->get('config');
+
         // search entities
         $entities = [
             'Account',
@@ -107,7 +105,7 @@ class Composer extends AbstractListener
         ];
 
         // get config data
-        $globalSearchEntityList = $this->getConfig()->get("globalSearchEntityList", []);
+        $globalSearchEntityList = $config->get("globalSearchEntityList", []);
 
         foreach ($entities as $entity) {
             if (!in_array($entity, $globalSearchEntityList)) {
@@ -116,9 +114,9 @@ class Composer extends AbstractListener
         }
 
         // set to config
-        $this->getConfig()->set('globalSearchEntityList', $globalSearchEntityList);
+        $config->set('globalSearchEntityList', $globalSearchEntityList);
 
         // save
-        $this->getConfig()->save();
+        $config->save();
     }
 }
