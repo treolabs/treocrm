@@ -82,7 +82,7 @@ We are working on documentation. The current version is available [here](https:/
 
 ### Requirements
 
-* Unix-based system. Linux mint recommend
+* Unix-based system. Linux Mint recommend
 * PHP 7.1 or above (with pdo_mysql, openssl, json, zip, gd, mbstring, xml, curl,exif extensions)
 * MySQL 5.5.3 or above
 
@@ -92,7 +92,7 @@ We are working on documentation. The current version is available [here](https:/
 
 ### Installation
 1. Install [TreoCore](https://github.com/treolabs/treocore#installation)
-2. Install TreoCrm module by ModuleManager
+2. Install TreoCrm module by module manager
 
 ### License
 
