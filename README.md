@@ -82,7 +82,7 @@ We are working on documentation. The current version is available [here](https:/
 
 ### Requirements
 
-* Unix-based system
+* Unix-based system. Linux mint recommend
 * PHP 7.1 or above (with pdo_mysql, openssl, json, zip, gd, mbstring, xml, curl,exif extensions)
 * MySQL 5.5.3 or above
 
