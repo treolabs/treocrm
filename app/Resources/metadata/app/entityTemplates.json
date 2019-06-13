@@ -1,0 +1,14 @@
+{
+  "BasePlus": {
+    "module": "Crm"
+  },
+  "Event": {
+    "module": "Crm"
+  },
+  "Person": {
+    "module": "Crm"
+  },
+  "Company": {
+    "module": "Crm"
+  }
+}

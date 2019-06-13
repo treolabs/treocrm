@@ -10,11 +10,15 @@
     }
   ],
   "require": {
-    "treolabs/treocore": "~3.18.0",
-    "treo-module/espocrm": "~1.2.0"
+    "treolabs/treocore": "~3.19.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Crm\\": "app/"
+    }
   },
   "extra": {
-    "treoId": "TreoCrm",
+    "treoId": "Crm",
     "name": {
       "default": "TreoCRM"
     },

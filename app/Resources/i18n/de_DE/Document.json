@@ -1,0 +1,38 @@
+{
+  "labels": {
+    "Create Document": "Dokument erstellen"
+  },
+  "fields": {
+    "file": "Datei",
+    "type": "Typ",
+    "publishDate": "Veröffentlichungsdatum",
+    "expirationDate": "Ablaufdatum",
+    "description": "Beschreibung",
+    "accounts": "Firmen",
+    "folder": "Ordner"
+  },
+  "links": {
+    "accounts": "Firmen",
+    "opportunities": "Verkaufschancen",
+    "folder": "Ordner",
+    "leads": "Interessenten",
+    "contacts": "Kontakte"
+  },
+  "options": {
+    "status": {
+      "Active": "Aktiv",
+      "Draft": "Entwurf",
+      "Expired": "Abgelaufen",
+      "Canceled": "Storniert"
+    },
+    "type": {
+      "": "Kein(e)",
+      "Contract": "Vertrag",
+      "License Agreement": "Lizenzvereinbarung"
+    }
+  },
+  "presetFilters": {
+    "active": "Aktiv",
+    "draft": "Entwurf"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "fields": {
+    "name": "Ім'я",
+    "number": "Номер",
+    "status": "Статус",
+    "account": "Контрагент",
+    "contact": "Контакт",
+    "contacts": "Контакти",
+    "priority": "Пріоритет",
+    "type": "Тип",
+    "description": "Опис",
+    "lead": "Лід",
+    "attachments": "Вкладення",
+    "inboundEmail": "Групова поштова скринька"
+  },
+  "links": {
+    "account": "Контрагент",
+    "contact": "Контакт (Основний)",
+    "Contacts": "Контакти",
+    "meetings": "Зустрічі",
+    "calls": "Дзвінки",
+    "tasks": "Завдання",
+    "emails": "Електронні скриньки",
+    "articles": "Статті Бази Знань",
+    "lead": "Лід",
+    "attachments": "Вкладення",
+    "inboundEmail": "Групова поштова скринька"
+  },
+  "options": {
+    "status": {
+      "New": "Новий",
+      "Assigned": "На розгляді",
+      "Pending": "Поточне",
+      "Closed": "Закрито",
+      "Rejected": "Відмовлено",
+      "Duplicate": "Дуплікат"
+    },
+    "priority": {
+      "Low": "Низький",
+      "Normal": "Нормальний",
+      "High": "Високий",
+      "Urgent": "Терміново"
+    },
+    "type": {
+      "Question": "Питання",
+      "Incident": "Випадок",
+      "Problem": "Проблема"
+    }
+  },
+  "labels": {
+    "Create Case": "Створити Звернення",
+    "Close": "Закрити",
+    "Reject": "Відхилити",
+    "Closed": "Закрите",
+    "Rejected": "Відхилено"
+  },
+  "presetFilters": {
+    "open": "Відкриті",
+    "closed": "Закриті"
+  }
+}

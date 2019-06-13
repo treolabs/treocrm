@@ -1,0 +1,93 @@
+{
+   "controller": "controllers/record",
+   "views":{
+      "detail":"crm:views/opportunity/detail"
+   },
+   "recordViews":{
+      "edit":"crm:views/opportunity/record/edit",
+      "editSmall":"crm:views/opportunity/record/edit-small",
+      "list":"crm:views/opportunity/record/list",
+      "kanban": "crm:views/opportunity/record/kanban"
+   },
+   "sidePanels":{
+      "detail":[
+         {
+            "name":"activities",
+            "label":"Activities",
+            "view":"crm:views/opportunity/record/panels/activities",
+            "aclScope": "Activities"
+         },
+         {
+            "name":"history",
+            "label":"History",
+            "view":"crm:views/record/panels/history",
+            "aclScope": "Activities"
+         },
+         {
+            "name":"tasks",
+            "label":"Tasks",
+            "view":"crm:views/record/panels/tasks",
+            "aclScope": "Task"
+         }
+      ],
+      "detailSmall":[
+         {
+            "name":"activities",
+            "label":"Activities",
+            "view":"crm:views/record/panels/activities",
+            "aclScope": "Activities"
+         },
+         {
+            "name":"history",
+            "label":"History",
+            "view":"crm:views/record/panels/history",
+            "aclScope": "Activities"
+         },
+         {
+            "name":"tasks",
+            "label":"Tasks",
+            "view":"crm:views/record/panels/tasks",
+            "aclScope": "Task"
+         }
+      ]
+   },
+   "filterList": [
+      {
+         "name":"open"
+      },
+      {
+         "name":"won",
+         "style": "success"
+      }
+   ],
+   "boolFilterList": ["onlyMy"],
+   "additionalLayouts": {
+      "detailConvert": {
+         "type": "detail"
+      },
+      "listForAccount": {
+         "type": "listSmall"
+      },
+      "listForContact": {
+         "type": "listSmall"
+      }
+   },
+   "kanbanViewMode": true,
+   "dynamicLogic": {
+      "fields": {
+         "lastStage": {
+             "visible": {
+                 "conditionGroup": [
+                     {
+                         "type": "equals",
+                         "attribute": "stage",
+                         "value": "Closed Lost"
+                     }
+                 ]
+             }
+         }
+      }
+   },
+   "color": "#9fc77e",
+   "iconClass": "fas fa-dollar-sign"
+}

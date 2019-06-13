@@ -1,0 +1,27 @@
+{
+  "fields": {
+    "name": "Nazwa",
+    "description": "Opis",
+    "entryCount": "Ilość jednostek",
+    "campaigns": "Kampanie",
+    "endDate": "Data zakończenia",
+    "targetLists": "Listy docelowe"
+  },
+  "links": {
+    "accounts": "Klienci",
+    "contacts": "Kontakty",
+    "campaigns": "Kampanie",
+    "massEmails": "Wiadomości masowe"
+  },
+  "options": {
+    "type": {
+      "Email": "E-mail",
+      "Web": "Strona internetowa",
+      "Television": "Telewizja"
+    }
+  },
+  "labels": {
+    "Opted Out": "Wypisany",
+    "Opt-Out": "Wypisz się"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "fields": {
+    "name": "Vardas",
+    "description": "Aprašymas",
+    "entryCount": "Įrašų skaičius",
+    "campaigns": "Kampanijos",
+    "endDate": "Pabaigos data",
+    "targetLists": "Adresatų sarašai",
+    "includingActionList": "Įskaitant",
+    "excludingActionList": "Išskyrus",
+    "optedOutCount": "Pasirinkta suma",
+    "targetStatus": "Tikslo būsena",
+    "isOptedOut": "Yra atmesta"
+  },
+  "links": {
+    "accounts": "Įmonės",
+    "contacts": "Kontaktai",
+    "leads": "Potencialūs klientai",
+    "campaigns": "Kampanijos",
+    "massEmails": "Masiniai el. laiškai"
+  },
+  "options": {
+    "type": {
+      "Email": "El. paštas",
+      "Web": "Internetas",
+      "Television": "Televizija",
+      "Radio": "Radijas",
+      "Newsletter": "Naujienlaiškis"
+    },
+    "targetStatus": {
+      "Opted Out": "Pasirinkta",
+      "Listed": "Sąraše"
+    }
+  },
+  "labels": {
+    "Create TargetList": "Sukurti adresatų sąrašą",
+    "Opted Out": "Pasirinkta",
+    "Cancel Opt-Out": "Atšaukti atsisakymą",
+    "Opt-Out": "Atsisakyti"
+  }
+}

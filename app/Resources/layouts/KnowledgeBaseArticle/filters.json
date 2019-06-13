@@ -1,0 +1,11 @@
+[
+    "createdAt",
+    "createdBy",
+    "modifiedAt",
+    "expirationDate",
+    "language",
+    "type",
+    "status",
+    "portals",
+    "publishDate"
+]

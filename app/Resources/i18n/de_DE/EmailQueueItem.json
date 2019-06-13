@@ -1,0 +1,27 @@
+{
+  "fields": {
+    "target": "Ziel",
+    "sentAt": "Sendedatum",
+    "attemptCount": "Versuche",
+    "emailAddress": "E-Mail Adresse",
+    "massEmail": "Massen E-Mails",
+    "isTest": "Ist Test"
+  },
+  "links": {
+    "target": "Ziel",
+    "massEmail": "Massen E-Mails"
+  },
+  "options": {
+    "status": {
+      "Pending": "Schwebend",
+      "Sent": "Gesendet",
+      "Failed": "Fehlgeschlagen",
+      "Sending": "Wird gesendet"
+    }
+  },
+  "presetFilters": {
+    "pending": "Schwebend",
+    "sent": "Gesendet",
+    "failed": "Fehlgeschlagen"
+  }
+}

@@ -1,0 +1,278 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "trim": true
+        },
+        "amount": {
+            "type": "currency",
+            "required": true,
+            "audited": true
+        },
+        "amountConverted": {
+            "type": "currencyConverted",
+            "readOnly": true
+        },
+        "amountWeightedConverted": {
+            "type": "float",
+            "readOnly": true,
+            "notStorable": true,
+            "select": "opportunity.amount * amountCurrencyRate.rate * opportunity.probability / 100",
+            "where": {
+                "=": "(opportunity.amount * amountCurrencyRate.rate * opportunity.probability / 100) = {value}",
+                "<": "(opportunity.amount * amountCurrencyRate.rate * opportunity.probability / 100) < {value}",
+                ">": "(opportunity.amount * amountCurrencyRate.rate * opportunity.probability / 100) > {value}",
+                "<=": "(opportunity.amount * amountCurrencyRate.rate * opportunity.probability / 100) <= {value}",
+                ">=": "(opportunity.amount * amountCurrencyRate.rate * opportunity.probability / 100) >= {value}",
+                "<>": "(opportunity.amount * amountCurrencyRate.rate * opportunity.probability / 100) <> {value}",
+                "IS NULL": "opportunity.amount IS NULL",
+                "IS NOT NULL": "opportunity.amount IS NOT NULL"
+            },
+            "orderBy": "amountWeightedConverted {direction}",
+            "view": "views/fields/currency-converted"
+        },
+        "account": {
+            "type": "link",
+            "exportDisabled": true
+        },
+        "contacts": {
+            "type": "linkMultiple",
+            "view": "crm:views/opportunity/fields/contacts",
+            "columns": {
+                "role": "opportunityRole"
+            },
+            "orderBy": "name",
+            "exportDisabled": true
+        },
+        "stage": {
+            "type": "enum",
+            "options": ["Prospecting", "Qualification", "Proposal", "Negotiation", "Closed Won", "Closed Lost"],
+            "view": "crm:views/opportunity/fields/stage",
+            "default": "Prospecting",
+            "audited": true,
+            "probabilityMap": {
+                "Prospecting": 10,
+                "Qualification": 20,
+                "Proposal": 50,
+                "Negotiation": 80,
+                "Closed Won": 100,
+                "Closed Lost": 0
+            },
+            "fieldManagerAdditionalParamList": [
+                {
+                    "name": "probabilityMap",
+                    "view": "crm:views/opportunity/admin/field-manager/fields/probability-map"
+                }
+            ]
+        },
+        "lastStage": {
+            "type": "enum",
+            "view": "crm:views/opportunity/fields/last-stage",
+            "customizationOptionsDisabled": true,
+            "customizationDefaultDisabled": true
+        },
+        "probability": {
+            "type": "int",
+            "required": true,
+            "min": 0,
+            "max": 100
+        },
+        "leadSource": {
+            "type": "enum",
+            "view": "crm:views/opportunity/fields/lead-source",
+            "customizationOptionsDisabled": true,
+            "default": ""
+        },
+        "closeDate": {
+            "type": "date",
+            "required": true,
+            "audited": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "campaign": {
+            "type": "link",
+            "exportDisabled": true
+        },
+        "originalLead": {
+            "type": "link",
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "readOnly": true,
+            "view": "views/fields/link-one",
+            "exportDisabled": true
+        },
+        "contactRole": {
+            "type": "enum",
+            "notStorable": true,
+            "layoutMassUpdateDisabled": true,
+            "layoutListDisabled": true,
+            "layoutDetailDisabled": true,
+            "customizationDefaultDisabled": true,
+            "customizationRequiredDisabled": true,
+            "customizationIsSortedDisabled": true,
+            "customizationAuditedDisabled": true,
+            "customizationReadOnlyDisabled": true,
+            "where": {
+                "=": {
+                    "leftJoins": ["contacts"],
+                    "sql": "contactsMiddle.role = {value}",
+                    "distinct": true
+                },
+                "<>": "opportunity.id NOT IN (SELECT opportunity_id FROM contact_opportunity WHERE deleted = 0 AND role = {value})",
+                "IN": {
+                    "leftJoins": ["contacts"],
+                    "sql": "contactsMiddle.role IN {value}",
+                    "distinct": true
+                },
+                "NOT IN": "opportunity.id NOT IN (SELECT opportunity_id FROM contact_opportunity WHERE deleted = 0 AND role IN {value})",
+                "LIKE": {
+                    "leftJoins": ["contacts"],
+                    "sql": "contactsMiddle.role LIKE {value}",
+                    "distinct": true
+                },
+                "IS NULL": {
+                    "leftJoins": ["contacts"],
+                    "sql": "contactsMiddle.role IS NULL",
+                    "distinct": true
+                },
+                "IS NOT NULL": "opportunity.id NOT IN (SELECT opportunity_id FROM contact_opportunity WHERE deleted = 0 AND role IS NULL)"
+            },
+            "view": "crm:views/opportunity/fields/contact-role",
+            "customizationOptionsDisabled": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "assignedUser": {
+            "type": "link",
+            "required": false,
+            "view": "views/fields/assigned-user"
+        },
+        "teams": {
+            "type": "linkMultiple",
+            "view": "views/fields/teams"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "account": {
+            "type": "belongsTo",
+            "entity": "Account",
+            "foreign": "opportunities"
+        },
+        "contacts": {
+            "type": "hasMany",
+            "entity": "Contact",
+            "foreign": "opportunities",
+            "additionalColumns": {
+                "role": {
+                    "type": "varchar",
+                    "len": 50
+                }
+            }
+        },
+        "meetings": {
+            "type": "hasChildren",
+            "entity": "Meeting",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "audited": true
+        },
+        "calls": {
+            "type": "hasChildren",
+            "entity": "Call",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "audited": true
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true,
+            "audited": true
+        },
+        "emails": {
+            "type": "hasChildren",
+            "entity": "Email",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "documents": {
+            "type": "hasMany",
+            "entity": "Document",
+            "foreign": "opportunities",
+            "audited": true
+        },
+        "campaign": {
+            "type": "belongsTo",
+            "entity": "Campaign",
+            "foreign": "opportunities",
+            "noJoin": true
+        },
+        "originalLead": {
+            "type": "hasOne",
+            "entity": "Lead",
+            "foreign": "createdOpportunity"
+        }
+    },
+    "collection": {
+        "sortBy": "createdAt",
+        "asc": false
+    },
+    "indexes": {
+        "stage": {
+            "columns": ["stage", "deleted"]
+        },
+        "lastStage": {
+            "columns": ["lastStage"]
+        },
+        "assignedUser": {
+            "columns": ["assignedUserId", "deleted"]
+        },
+        "createdAt": {
+            "columns": ["createdAt", "deleted"]
+        },
+        "createdAtStage": {
+            "columns": ["createdAt", "stage"]
+        },
+        "assignedUserStage": {
+            "columns": ["assignedUserId", "stage"]
+        }
+    }
+}

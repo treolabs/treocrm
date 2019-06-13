@@ -1,0 +1,153 @@
+{
+    "controller": "treo-crm:controllers/lead",
+    "views":{
+        "detail":"crm:views/lead/detail"
+    },
+    "recordViews":{
+        "detail":"crm:views/lead/record/detail"
+    },
+    "sidePanels":{
+        "detail":[
+            {
+                "name":"convertedTo",
+                "label":"Converted To",
+                "view":"crm:views/lead/record/panels/converted-to",
+                "notRefreshable":true,
+                "hidden":true,
+                "style":"success",
+                "isForm": true
+            },
+            {
+                "name":"activities",
+                "label":"Activities",
+                "view":"crm:views/record/panels/activities",
+                "aclScope":"Activities"
+            },
+            {
+                "name":"history",
+                "label":"History",
+                "view":"crm:views/record/panels/history",
+                "aclScope":"Activities"
+            },
+            {
+                "name":"tasks",
+                "label":"Tasks",
+                "view":"crm:views/record/panels/tasks",
+                "aclScope":"Task"
+            }
+        ],
+        "edit":[
+            {
+                "name":"convertedTo",
+                "label":"Converted To",
+                "view":"crm:views/lead/record/panels/converted-to",
+                "notRefreshable":true,
+                "hidden":true,
+                "style":"success",
+                "isForm": true
+            }
+        ],
+        "detailSmall":[
+            {
+                "name":"convertedTo",
+                "label":"Converted To",
+                "view":"crm:views/lead/record/panels/converted-to",
+                "notRefreshable":true,
+                "hidden":true,
+                "style":"success",
+                "isForm": true
+            },
+            {
+                "name":"activities",
+                "label":"Activities",
+                "view":"crm:views/record/panels/activities",
+                "aclScope":"Activities"
+            },
+            {
+                "name":"history",
+                "label":"History",
+                "view":"crm:views/record/panels/history",
+                "aclScope":"Activities"
+            },
+            {
+                "name":"tasks",
+                "label":"Tasks",
+                "view":"crm:views/record/panels/tasks",
+                "aclScope":"Task"
+            }
+        ],
+        "editSmall":[
+            {
+                "name":"convertedTo",
+                "label":"Converted To",
+                "view":"crm:views/lead/record/panels/converted-to",
+                "notRefreshable":true,
+                "hidden":true,
+                "style":"success",
+                "isForm": true
+            }
+        ]
+    },
+    "relationshipPanels":{
+        "campaignLogRecords":{
+            "rowActionsView":"views/record/row-actions/empty",
+            "select":false,
+            "create":false
+        },
+        "targetLists":{
+            "create": false,
+            "rowActionsView": "crm:views/record/row-actions/relationship-target",
+            "layout": "listForTarget",
+            "view": "crm:views/record/panels/target-lists"
+        }
+    },
+    "filterList":[
+        {
+            "name":"actual"
+        },
+        {
+            "name":"converted",
+            "style":"success"
+        }
+    ],
+    "boolFilterList":[
+        "onlyMy"
+    ],
+    "dynamicLogic":{
+        "fields":{
+            "name":{
+                "required":{
+                    "conditionGroup":[
+                        {
+                            "type":"isEmpty",
+                            "attribute":"accountName"
+                        },
+                        {
+                            "type":"isEmpty",
+                            "attribute":"emailAddress"
+                        },
+                        {
+                            "type":"isEmpty",
+                            "attribute":"phoneNumber"
+                        }
+                    ]
+                }
+            }
+        },
+        "panels": {
+            "convertedTo": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "status",
+                            "value": "Converted"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "color": "#d6a2c9",
+    "iconClass": "fas fa-address-card"
+}

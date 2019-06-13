@@ -1,0 +1,40 @@
+{
+  "labels": {
+    "Create KnowledgeBaseArticle": "Utwórz artykuł",
+    "Any": "Dowolny",
+    "Send in Email": "Wyślij w wiadomości",
+    "Move Up": "Przesuń w górę",
+    "Move Down": "Przesuń w dół",
+    "Move to Top": "Przesuń na wierzch",
+    "Move to Bottom": "Przesuń pod spód"
+  },
+  "fields": {
+    "name": "Nazwa",
+    "type": "Typ",
+    "attachments": "Załączniki",
+    "publishDate": "Data publikacji",
+    "expirationDate": "Data przedawnienia",
+    "description": "Opis",
+    "body": "Treść",
+    "categories": "Kategorie",
+    "language": "Język",
+    "portals": "Portale"
+  },
+  "links": {
+    "cases": "Sprawy",
+    "opportunities": "Szanse sprzedaży",
+    "categories": "Kategorie",
+    "portals": "Portale"
+  },
+  "options": {
+    "status": {
+      "In Review": "W recenzji",
+      "Draft": "Szkic",
+      "Archived": "Zarchiwizowany",
+      "Published": "Opublikowane"
+    },
+    "type": {
+      "Article": "Artykuł"
+    }
+  }
+}

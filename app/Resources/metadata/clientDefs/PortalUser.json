@@ -1,0 +1,36 @@
+{
+  "views": {
+    "detail": "crm:views/user/detail",
+    "list": "crm:views/portal-user/list"
+  },
+  "sidePanels": {
+    "detail": [
+      {
+        "name": "activities",
+        "label": "Activities",
+        "view": "crm:views/record/panels/activities",
+        "aclScope": "Activities"
+      },
+      {
+        "name": "history",
+        "label": "History",
+        "view": "crm:views/record/panels/history",
+        "aclScope": "Activities"
+      }
+    ],
+    "detailSmall": [
+      {
+        "name": "activities",
+        "label": "Activities",
+        "view": "crm:views/record/panels/activities",
+        "aclScope": "Activities"
+      },
+      {
+        "name": "history",
+        "label": "History",
+        "view": "crm:views/record/panels/history",
+        "aclScope": "Activities"
+      }
+    ]
+  }
+}

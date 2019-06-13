@@ -1,0 +1,47 @@
+{
+    "view":"crm:views/dashlets/sales-by-month",
+    "aclScope": "Opportunity",
+    "options": {
+        "view": "crm:views/dashlets/options/chart",
+        "fields": {
+            "title": {
+                "type": "varchar",
+                "required": true
+            },
+            "dateFrom": {
+                "type": "date",
+                "required": true
+            },
+            "dateTo": {
+                "type": "date",
+                "required": true
+            },
+            "dateFilter": {
+                "type": "enum",
+                "options": ["currentYear", "currentQuarter", "between"],
+                "default": "currentYear",
+                "translation": "Global.options.dateSearchRanges"
+            }
+        },
+        "layout": [
+            {
+                "rows": [
+                    [
+                        {"name": "title"}
+                    ],
+                    [
+                        {"name": "dateFilter"},
+                        false
+                    ],
+                    [
+                        {"name": "dateFrom"},
+                        {"name": "dateTo"}
+                    ]
+                ]
+            }
+        ],
+        "defaults": {
+            "dateFilter": "currentYear"
+        }
+    }
+}

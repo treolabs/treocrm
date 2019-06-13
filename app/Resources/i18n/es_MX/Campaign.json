@@ -1,0 +1,84 @@
+{
+  "fields": {
+    "name": "Nombre",
+    "description": "Descripción",
+    "status": "Estátus",
+    "type": "Tipo",
+    "startDate": "Fecha de Inicio",
+    "endDate": "Fecha de Fin",
+    "targetLists": "Lista de Intereses",
+    "excludingTargetLists": "Listas de Intereses Excluidas",
+    "sentCount": "Enviado",
+    "openedCount": "Abierto",
+    "clickedCount": "Leídos",
+    "optedOutCount": "Rechazado",
+    "bouncedCount": "Rebotados",
+    "hardBouncedCount": "No Existen",
+    "softBouncedCount": "No Aceptados",
+    "leadCreatedCount": "Referencias Creadas",
+    "revenue": "Ingresos",
+    "revenueConverted": "ingresos (convertido)",
+    "budget": "Presupuesto",
+    "budgetConverted": "Presupuesto (convertido)",
+    "contactsTemplate": "Formato de Contactos",
+    "leadsTemplate": "Formato de Referencias",
+    "accountsTemplate": "Formato de Cuentas",
+    "usersTemplate": "Formato de Usuarios",
+    "mailMergeOnlyWithAddress": "Saltar registros sin dirección capturada"
+  },
+  "links": {
+    "targetLists": "Listas de Intereses",
+    "excludingTargetLists": "Listas de Intereses Excluidas",
+    "accounts": "Cuentas",
+    "contacts": "Contactos",
+    "leads": "Referencias",
+    "opportunities": "Oportunidades",
+    "campaignLogRecords": "Historial",
+    "massEmails": "Correos Masivos",
+    "trackingUrls": "Seguimiento a URLs",
+    "contactsTemplate": "Formato de Contactos",
+    "leadsTemplate": "Formato de Referencias",
+    "accountsTemplate": "Formato de Cuentas",
+    "usersTemplate": "Formato de Usuarios"
+  },
+  "options": {
+    "type": {
+      "Email": "Correo electrónico",
+      "Television": "Televisión",
+      "Newsletter": "Periódico",
+      "Mail": "Correo"
+    },
+    "status": {
+      "Planning": "Planificación",
+      "Active": "Activo",
+      "Inactive": "Inactivo",
+      "Complete": "Completada"
+    }
+  },
+  "labels": {
+    "Create Campaign": "Crear Campaña",
+    "Target Lists": "Listas de Intereses",
+    "Statistics": "Estadísticas",
+    "hard": "duro",
+    "soft": "suave",
+    "Unsubscribe": "Cancelar suscripción",
+    "Mass Emails": "Correos Masivos",
+    "Email Templates": "Correo Modelo",
+    "Unsubscribe again": "Cancelar otra vez la suscripción",
+    "Subscribe again": "Volverse a suscribir",
+    "Create Target List": "Crear Lista de Obejtivos",
+    "Mail Merge": "Generar Correos",
+    "Generate Mail Merge PDF": "Generar PDF para Correos"
+  },
+  "presetFilters": {
+    "active": "Activo"
+  },
+  "messages": {
+    "unsubscribed": "Usted ha cancelado la suscripción a nuestra lista de correo.",
+    "subscribedAgain": "Usted se ha vuelto a suscribir."
+  },
+  "tooltips": {
+    "targetLists": "Intereses que deben recibir mensajes.",
+    "excludingTargetLists": "Los intereses que no deben recibir mensajes."
+  }
+}

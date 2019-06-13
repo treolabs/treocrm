@@ -1,0 +1,56 @@
+{
+  "fields": {
+    "storeSentEmails": "Gesendete E-Mails speichern",
+    "startAt": "Startdatum",
+    "fromAddress": "Absenderadresse",
+    "fromName": "Absendername",
+    "replyToAddress": "Antwort-an Adresse",
+    "replyToName": "Antwort-an Name",
+    "campaign": "Kampagne",
+    "emailTemplate": "E-Mail Vorlage",
+    "inboundEmail": "E-Mail Konto",
+    "targetLists": "Kontaktlisten",
+    "excludingTargetLists": "Kontaktlisten ausschließen",
+    "optOutEntirely": "Vollständiger Opt-Out",
+    "smtpAccount": "SMTP-Konto"
+  },
+  "links": {
+    "targetLists": "Kontaktlisten",
+    "excludingTargetLists": "Kontaktlisten ausschließen",
+    "queueItems": "Warteschlangeneinträge",
+    "campaign": "Kampagne",
+    "emailTemplate": "E-Mail Vorlage",
+    "inboundEmail": "E-Mail Konto"
+  },
+  "options": {
+    "status": {
+      "Draft": "Entwurf",
+      "Pending": "Schwebend",
+      "In Process": "In Arbeit",
+      "Complete": "Fertig",
+      "Canceled": "Storniert",
+      "Failed": "Fehlgeschlagen"
+    }
+  },
+  "labels": {
+    "Create MassEmail": "Massen E-Mail erstellen",
+    "Send Test": "Test senden",
+    "System SMTP": "SMTP-System",
+    "system": "System",
+    "group": "Gruppe"
+  },
+  "messages": {
+    "selectAtLeastOneTarget": "Zumindest ein Ziel auswählen",
+    "testSent": "Test E-Mail(s) die gesendet werden sollen"
+  },
+  "tooltips": {
+    "optOutEntirely": "Für E-Mail Adressen von Empfängern, die sich abgemeldet haben, wird ein Opt-out gesetzt. Diese werden keine Massenaussendungen mehr erhalten.",
+    "targetLists": "Zielkontakte die Nachrichten empfangen sollen",
+    "excludingTargetLists": "Zielkontakte die keine Nachrichten empfangen sollen",
+    "storeSentEmails": "E-Mails werden in CRM gespeichert."
+  },
+  "presetFilters": {
+    "actual": "Aktuell",
+    "complete": "Fertig"
+  }
+}

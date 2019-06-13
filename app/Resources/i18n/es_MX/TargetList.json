@@ -1,0 +1,38 @@
+{
+  "fields": {
+    "name": "Nombre",
+    "description": "Descripción",
+    "entryCount": "Contador de entradas",
+    "campaigns": "Campañas",
+    "endDate": "Fecha de Fin",
+    "targetLists": "Listas de Intereses",
+    "includingActionList": "Incluyendo",
+    "excludingActionList": "Excluyendo",
+    "optedOutCount": "Contador de Exclusiones",
+    "targetStatus": "Status del Interés",
+    "isOptedOut": "Se ha Excluido"
+  },
+  "links": {
+    "accounts": "Cuentas",
+    "contacts": "Contactos",
+    "leads": "Referencias",
+    "campaigns": "Campañas",
+    "massEmails": "Correos Masivos"
+  },
+  "options": {
+    "type": {
+      "Email": "Correo electrónico",
+      "Television": "Televisión"
+    },
+    "targetStatus": {
+      "Opted Out": "Excluido",
+      "Listed": "Listado"
+    }
+  },
+  "labels": {
+    "Create TargetList": "Crear lista de Intereses",
+    "Opted Out": "Rechazado",
+    "Cancel Opt-Out": "Cancelar Confirmación",
+    "Opt-Out": "Confirmar"
+  }
+}

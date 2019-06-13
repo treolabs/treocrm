@@ -1,0 +1,55 @@
+{
+  "views": {
+    "detail": "crm:views/user/detail"
+  },
+  "sidePanels": {
+    "detail": [
+      {
+        "name": "activities",
+        "label": "Activities",
+        "view": "crm:views/record/panels/activities",
+        "aclScope": "Activities"
+      },
+      {
+        "name": "history",
+        "label": "History",
+        "view": "crm:views/record/panels/history",
+        "aclScope": "Activities"
+      },
+      {
+        "name": "tasks",
+        "label": "Tasks",
+        "view": "crm:views/user/record/panels/tasks",
+        "aclScope": "Task"
+      }
+    ],
+    "detailSmall": [
+      {
+        "name": "activities",
+        "label": "Activities",
+        "view": "crm:views/record/panels/activities",
+        "aclScope": "Activities"
+      },
+      {
+        "name": "history",
+        "label": "History",
+        "view": "crm:views/record/panels/history",
+        "aclScope": "Activities"
+      },
+      {
+        "name": "tasks",
+        "label": "Tasks",
+        "view": "crm:views/user/record/panels/tasks",
+        "aclScope": "Task"
+      }
+    ]
+  },
+  "relationshipPanels": {
+    "targetLists": {
+      "create": false,
+      "rowActionsView": "crm:views/record/row-actions/relationship-target",
+      "layout": "listForTarget",
+      "view": "crm:views/record/panels/target-lists"
+    }
+  }
+}

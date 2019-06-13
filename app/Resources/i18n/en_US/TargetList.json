@@ -1,0 +1,41 @@
+{
+    "fields": {
+        "name": "Name",
+        "description": "Description",
+        "entryCount": "Entry Count",
+        "optedOutCount": "Opted Out Count",
+        "campaigns": "Campaigns",
+        "endDate": "End Date",
+        "targetLists": "Target Lists",
+        "includingActionList": "Including",
+        "excludingActionList": "Excluding",
+        "targetStatus": "Target Status",
+        "isOptedOut": "Is Opted Out"
+    },
+    "links": {
+        "accounts": "Accounts",
+        "contacts": "Contacts",
+        "leads": "Leads",
+        "campaigns": "Campaigns",
+        "massEmails": "Mass Emails"
+    },
+    "options": {
+        "type": {
+            "Email": "Email",
+            "Web": "Web",
+            "Television": "Television",
+            "Radio": "Radio",
+            "Newsletter": "Newsletter"
+        },
+        "targetStatus": {
+            "Opted Out": "Opted Out",
+            "Listed": "Listed"
+        }
+    },
+    "labels": {
+        "Create TargetList": "Create Target List",
+        "Opted Out": "Opted Out",
+        "Cancel Opt-Out": "Cancel Opt-Out",
+        "Opt-Out": "Opt-Out"
+    }
+}

@@ -1,0 +1,4 @@
+[
+    {"name":"name", "link":true},
+    {"name":"targetStatus", "width": 25, "notSortable": true}
+]

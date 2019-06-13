@@ -1,0 +1,80 @@
+{
+  "fields": {
+    "name": "Nazwa",
+    "emailAddress": "E-mail",
+    "website": "Strona Internetowa",
+    "phoneNumber": "Telefon",
+    "billingAddress": "Adres Firmy",
+    "shippingAddress": "Adres Dostawy",
+    "description": "Opis ",
+    "sicCode": "PKD",
+    "industry": "Branża",
+    "type": "Rodzaj",
+    "contactRole": "Rola",
+    "campaign": "Kampania",
+    "targetLists": "Listy docelowe",
+    "targetList": "Lista docelowa"
+  },
+  "links": {
+    "contacts": "Kontakty",
+    "opportunities": "Szanse sprzedaży",
+    "cases": "Sprawy",
+    "documents": "Dokumenty",
+    "meetingsPrimary": "Spotkania (rozwinięte)",
+    "callsPrimary": "Rozmowy (rozwinięte)",
+    "tasksPrimary": "Zadania (rozwinięte)",
+    "emailsPrimary": "Wiadomości (rozwinięte)",
+    "targetLists": "Listy docelowe",
+    "campaignLogRecords": "Log kampanii",
+    "campaign": "Kampania"
+  },
+  "options": {
+    "type": {
+      "Customer": "Klient",
+      "Investor": "Inwestor",
+      "Reseller": "Sprzedawca"
+    },
+    "industry": {
+      "Advertising": "Reklamy",
+      "Apparel & Accessories": "Wystrój i akcesoria",
+      "Automotive": "Motoryzacja",
+      "Banking": "Bankowość",
+      "Biotechnology": "Biotechnologia",
+      "Building Materials & Equipment": "Materiały budowlane i wyposażenie",
+      "Chemical": "Chemia",
+      "Computer": "Komputery",
+      "Education": "Edukacja",
+      "Electronics": "Elektronika",
+      "Energy": "Energetyka",
+      "Entertainment & Leisure": "Rozrywka",
+      "Finance": "Finanse",
+      "Food & Beverage": "Jedzenie i napoje",
+      "Grocery": "Sklep spożywczy",
+      "Healthcare": "Opieka zdrowotna",
+      "Insurance": "Ubezpieczenia",
+      "Sports": "Sport",
+      "Technology": "Technologia",
+      "Telecommunications": "Telekomunikacja",
+      "Television": "Telewizja",
+      "Transportation": "Transport",
+      "Architecture": "Architektura",
+      "Defense": "Obrona",
+      "Creative": "Kreatywność",
+      "Culture": "Kultura",
+      "Consulting": "Konsulting",
+      "Hospitality": "Szpital",
+      "Mass Media": "Media",
+      "Mining": "Kopalnie",
+      "Music": "Muzyka",
+      "Support": "Wsparcie",
+      "Water": "Woda"
+    }
+  },
+  "labels": {
+    "Create Account": "Utwórz Konto"
+  },
+  "presetFilters": {
+    "customers": "Klienci",
+    "partners": "Partnerzy"
+  }
+}

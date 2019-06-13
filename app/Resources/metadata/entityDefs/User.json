@@ -1,0 +1,77 @@
+{
+  "fields": {
+    "contact": {
+      "type": "link",
+      "view": "views/user/fields/contact"
+    },
+    "accounts": {
+      "type": "linkMultiple"
+    },
+    "account": {
+      "type": "link",
+      "notStorable": true,
+      "readOnly": true
+    },
+    "acceptanceStatusMeetings": {
+      "type": "enum",
+      "notStorable": true,
+      "layoutListDisabled": true,
+      "layoutDetailDisabled": true,
+      "layoutMassUpdateDisabled": true,
+      "exportDisabled": true,
+      "view": "crm:views/lead/fields/acceptance-status",
+      "link": "meetings",
+      "column": "status"
+    },
+    "acceptanceStatusCalls": {
+      "type": "enum",
+      "notStorable": true,
+      "layoutListDisabled": true,
+      "layoutDetailDisabled": true,
+      "layoutMassUpdateDisabled": true,
+      "exportDisabled": true,
+      "view": "crm:views/lead/fields/acceptance-status",
+      "link": "calls",
+      "column": "status"
+    }
+  },
+  "links": {
+    "contact": {
+      "type": "belongsTo",
+      "entity": "Contact",
+      "foreign": "portalUser"
+    },
+    "targetLists": {
+      "type": "hasMany",
+      "entity": "TargetList",
+      "foreign": "users"
+    },
+    "targetListIsOptedOut": {
+      "type": "bool",
+      "notStorable": true,
+      "readOnly": true,
+      "disabled": true
+    },
+    "accounts": {
+      "type": "hasMany",
+      "entity": "Account",
+      "foreign": "portalUsers",
+      "relationName": "AccountPortalUser"
+    },
+    "meetings": {
+      "type": "hasMany",
+      "entity": "Meeting",
+      "foreign": "users"
+    },
+    "calls": {
+      "type": "hasMany",
+      "entity": "Call",
+      "foreign": "users"
+    },
+    "tasks": {
+      "type": "hasMany",
+      "entity": "Task",
+      "foreign": "assignedUser"
+    }
+  }
+}

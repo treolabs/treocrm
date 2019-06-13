@@ -1,0 +1,47 @@
+{
+  "fields": {
+    "parent": "Bezieht sich auf",
+    "dateStart": "Startdatum",
+    "dateEnd": "Fällig am",
+    "dateStartDate": "Startdatum (ganztägig)",
+    "dateEndDate": "Enddatum (ganztägig)",
+    "priority": "Priorität",
+    "description": "Beschreibung",
+    "isOverdue": "Ist überfällig",
+    "account": "Firma",
+    "dateCompleted": "Datum erledigt",
+    "attachments": "Anhänge",
+    "reminders": "Erinnerungen",
+    "contact": "Kontakt"
+  },
+  "links": {
+    "attachments": "Anhänge",
+    "account": "Firma",
+    "contact": "Kontakt"
+  },
+  "options": {
+    "status": {
+      "Not Started": "Nicht begonnen",
+      "Started": "In Bearbeitung",
+      "Completed": "Abgeschlossen",
+      "Canceled": "Storniert",
+      "Deferred": "Zurückgestellt"
+    },
+    "priority": {
+      "Low": "Niedrig",
+      "High": "Hoch",
+      "Urgent": "Dringend"
+    }
+  },
+  "labels": {
+    "Create Task": "Neue Aufgabe",
+    "Complete": "Fertig"
+  },
+  "presetFilters": {
+    "actual": "Aktuell",
+    "completed": "Abgeschlossen",
+    "todays": "Heutige",
+    "overdue": "Überfällig",
+    "deferred": "Zurückgestellt"
+  }
+}

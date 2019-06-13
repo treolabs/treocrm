@@ -1,0 +1,27 @@
+{
+  "fields": {
+    "name": "Nazwa",
+    "target": "Cel",
+    "sentAt": "Data wysłania",
+    "attemptCount": "Próby",
+    "emailAddress": "Adres e-mail",
+    "massEmail": "Poczta masowa",
+    "isTest": "Testowa"
+  },
+  "links": {
+    "target": "Cel",
+    "massEmail": "Poczta masowa"
+  },
+  "options": {
+    "status": {
+      "Pending": "Oczekiwanie",
+      "Sent": "Wysłano",
+      "Failed": "Niepowodzenie"
+    }
+  },
+  "presetFilters": {
+    "pending": "Oczekiwanie",
+    "sent": "Wysłano",
+    "failed": "Niepowodzenie"
+  }
+}

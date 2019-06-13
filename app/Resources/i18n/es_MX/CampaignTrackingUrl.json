@@ -1,0 +1,12 @@
+{
+  "fields": {
+    "urlToUse": "Código para insertar en lugar de la URL",
+    "campaign": "Campaña"
+  },
+  "links": {
+    "campaign": "Campaña"
+  },
+  "labels": {
+    "Create CampaignTrackingUrl": "Crear Seguimiento a URLs"
+  }
+}

@@ -1,0 +1,185 @@
+{
+    "controller": "controllers/record",
+    "menu": {
+        "list": {
+            "buttons": [
+                {
+                    "label": "Target Lists",
+                    "link": "#TargetList",
+                    "acl": "read",
+                    "style": "default",
+                    "aclScope": "TargetList"
+                }
+            ],
+            "dropdown": [
+                {
+                    "label": "Mass Emails",
+                    "link": "#MassEmail",
+                    "acl": "read",
+                    "aclScope": "MassEmail"
+                },
+                {
+                    "label": "Email Templates",
+                    "link": "#EmailTemplate",
+                    "acl": "read",
+                    "aclScope": "EmailTemplate"
+                }
+            ]
+        }
+    },
+    "recordViews": {
+      "detail": "crm:views/campaign/record/detail"
+    },
+    "views": {
+      "detail": "crm:views/campaign/detail"
+    },
+    "sidePanels":{
+      "detail":[
+         {
+            "name":"statistics",
+            "label":"Statistics",
+            "view":"crm:views/campaign/record/panels/campaign-stats",
+            "hidden": false,
+            "isForm": true
+         }
+      ]
+    },
+    "relationshipPanels": {
+      "campaignLogRecords": {
+        "view": "crm:views/campaign/record/panels/campaign-log-records",
+        "layout": "listForCampaign",
+        "rowActionsView": "views/record/row-actions/remove-only",
+        "select": false,
+        "create": false
+      }
+    },
+    "filterList": [
+      "active"
+   ],
+    "dynamicLogic": {
+        "fields": {
+            "targetLists": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Email"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Newsletter"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Mail"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "excludingTargetLists": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "or",
+                            "value": [
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Email"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Newsletter"
+                                },
+                                {
+                                    "type": "equals",
+                                    "attribute": "type",
+                                    "value": "Mail"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "contactsTemplate": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "Mail"
+                        }
+                    ]
+                }
+            },
+            "leadsTemplate": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "Mail"
+                        }
+                    ]
+                }
+            },
+            "accountsTemplate": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "Mail"
+                        }
+                    ]
+                }
+            },
+            "usersTemplate": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "Mail"
+                        }
+                    ]
+                }
+            },
+            "mailMergeOnlyWithAddress": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "Mail"
+                        }
+                    ]
+                }
+            }
+        },
+        "panels": {
+            "mailMerge": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "type",
+                            "value": "Mail"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+   "boolFilterList": ["onlyMy"],
+   "iconClass": "fas fa-chart-line"
+}

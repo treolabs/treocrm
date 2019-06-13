@@ -1,0 +1,44 @@
+{
+    "fields": {
+        "action": "Action",
+        "actionDate": "Date",
+        "data": "Data",
+        "campaign": "Campaign",
+        "parent": "Target",
+        "object": "Object",
+        "application": "Application",
+        "queueItem": "Queue Item",
+        "stringData": "String Data",
+        "stringAdditionalData": "String Additional Data",
+        "isTest": "Is Test"
+    },
+    "links": {
+        "queueItem": "Queue Item",
+        "parent": "Parent",
+        "object": "Object",
+        "campaign": "Campaign"
+    },
+    "options": {
+    	"action": {
+            "Sent": "Sent",
+            "Opened": "Opened",
+            "Opted Out": "Opted Out",
+            "Bounced": "Bounced",
+            "Clicked": "Clicked",
+            "Lead Created": "Lead Created",
+            "Opted In": "Opted In"
+    	}
+    },
+    "labels": {
+        "All": "All"
+    },
+    "presetFilters": {
+        "sent": "Sent",
+        "opened": "Opened",
+        "optedOut": "Opted Out",
+        "optedIn": "Opted In",
+        "bounced": "Bounced",
+        "clicked": "Clicked",
+        "leadCreated": "Lead Created"
+    }
+}

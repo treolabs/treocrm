@@ -1,0 +1,36 @@
+{
+  "fields": {
+    "description": "Beschreibung",
+    "entryCount": "Eingabezähler",
+    "campaigns": "Kampagnen",
+    "endDate": "Enddatum",
+    "targetLists": "Kontaktlisten",
+    "includingActionList": "Inklusive",
+    "excludingActionList": "Exklusive",
+    "optedOutCount": "gesetzte Opt-Out Anzahl",
+    "targetStatus": "Zielstatus",
+    "isOptedOut": "Ist Opt-Out gesetzt"
+  },
+  "links": {
+    "accounts": "Firmen",
+    "contacts": "Kontakte",
+    "leads": "Interessenten",
+    "campaigns": "Kampagnen",
+    "massEmails": "Massen E-Mails"
+  },
+  "options": {
+    "type": {
+      "Email": "E-Mail",
+      "Television": "Fernsehen"
+    },
+    "targetStatus": {
+      "Opted Out": "Opt-Out gesetzt",
+      "Listed": "aufgelistet"
+    }
+  },
+  "labels": {
+    "Create TargetList": "Kontaktliste erstellen",
+    "Opted Out": "Opt-Out gesetzt",
+    "Cancel Opt-Out": "Opt-Out zurücksetzen"
+  }
+}

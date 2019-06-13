@@ -1,0 +1,20 @@
+{
+    "entity": true,
+    "layouts": true,
+    "tab": true,
+    "acl": true,
+    "aclPortal": true,
+    "aclPortalLevelList": ["all", "account", "contact", "own", "no"],
+    "activityStatusList": ["Not Started", "Started"],
+    "historyStatusList": ["Completed"],
+    "module": "Crm",
+    "customizable": true,
+    "importable": true,
+    "notifications": true,
+    "calendar": true,
+    "object": true,
+    "statusField": "status",
+    "stream": true,
+    "kanbanStatusIgnoreList": ["Canceled", "Deferred"],
+    "hasAssignedUser": true
+}

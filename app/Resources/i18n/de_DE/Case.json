@@ -1,0 +1,56 @@
+{
+  "fields": {
+    "number": "Nummer",
+    "account": "Firma",
+    "contact": "Kontakt",
+    "contacts": "Kontakte",
+    "priority": "Priorität",
+    "type": "Typ",
+    "description": "Beschreibung",
+    "lead": "Interessent",
+    "attachments": "Anhänge",
+    "inboundEmail": "Gruppen E-Mail Konto"
+  },
+  "links": {
+    "account": "Firma",
+    "contact": "Kontakt (Primär)",
+    "Contacts": "Kontakte",
+    "calls": "Anrufe",
+    "tasks": "Aufgaben",
+    "emails": "E-Mails",
+    "articles": "Wissensbasis Artikel",
+    "lead": "Interessent",
+    "attachments": "Anhänge",
+    "inboundEmail": "Gruppen E-Mail Konto"
+  },
+  "options": {
+    "status": {
+      "New": "Neu",
+      "Assigned": "Zugewiesen",
+      "Pending": "Schwebend",
+      "Closed": "Abgeschlossen",
+      "Rejected": "Abgelehnt",
+      "Duplicate": "Duplizieren"
+    },
+    "priority": {
+      "Low": "Niedrig",
+      "High": "Hoch",
+      "Urgent": "Dringend"
+    },
+    "type": {
+      "Question": "Frage",
+      "Incident": "Vorfall"
+    }
+  },
+  "labels": {
+    "Create Case": "Fall erstellen",
+    "Close": "Schließen",
+    "Reject": "Ablehnen",
+    "Closed": "Abgeschlossen",
+    "Rejected": "Abgelehnt"
+  },
+  "presetFilters": {
+    "open": "Offen",
+    "closed": "Abgeschlossen"
+  }
+}
