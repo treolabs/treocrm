@@ -31,17 +31,16 @@
  * and "TreoCrm" word.
  */
 
-Espo.define('treo-crm:controllers/lead', 'crm:controllers/lead', function (Dep) {
+Espo.define('crm:views/login', 'class-replace!crm:views/login',
+    Dep => Dep.extend({
 
-    return Dep.extend({
+        getLogoSrc: function () {
+            const companyLogoId = this.getConfig().get('companyLogoId');
+            if (!companyLogoId) {
+                return this.getBasePath() + 'client/modules/crm/img/treo_crm_logo_white.svg';
+            }
+            return this.getBasePath() + '?entryPoint=LogoImage&id='+companyLogoId+'&t=' + companyLogoId;
+        }
 
-        convert: function (id) {
-            this.main('treo-crm:views/lead/convert', {
-                id: id
-            });
-        },
-
-    });
-});
-
-
+   })
+);
