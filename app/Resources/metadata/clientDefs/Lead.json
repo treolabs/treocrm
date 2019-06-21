@@ -1,5 +1,5 @@
 {
-    "controller": "treo-crm:controllers/lead",
+    "controller": "crm:controllers/lead",
     "views":{
         "detail":"crm:views/lead/detail"
     },
