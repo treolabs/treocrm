@@ -1,21 +1,21 @@
 <?php
 /**
- * This file is part of EspoCRM and/or TreoCrm.
+ * This file is part of EspoCRM and/or TreoCore.
  *
  * EspoCRM - Open Source CRM application.
  * Copyright (C) 2014-2019 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * TreoCrm is EspoCRM-based Open Source application.
+ * TreoCore is EspoCRM-based Open Source application.
  * Copyright (C) 2017-2019 TreoLabs GmbH
  * Website: https://treolabs.com
  *
- * TreoCrm as well as EspoCRM is free software: you can redistribute it and/or modify
+ * TreoCore as well as EspoCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * TreoCrm as well as EspoCRM is distributed in the hope that it will be useful,
+ * TreoCore as well as EspoCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -29,7 +29,7 @@
  *
  * In accordance with Section 7(b) of the GNU General Public License version 3,
  * these Appropriate Legal Notices must retain the display of the "EspoCRM" word
- * and "TreoCrm" word.
+ * and "TreoCore" word.
  */
 
 namespace Crm\Repositories;
@@ -44,26 +44,6 @@ class Account extends \Espo\Core\ORM\Repositories\RDB
 
         if ($entity->has('targetListId')) {
         	$this->relate($entity, 'targetLists', $entity->get('targetListId'));
-        }
-    }
-
-    protected function afterRelateContacts(Entity $entity, $foreign, $data, array $options = array())
-    {
-        if (!($foreign instanceof Entity)) return;
-
-        if (!$foreign->get('accountId')) {
-            $foreign->set('accountId', $entity->id);
-            $this->getEntityManager()->saveEntity($foreign);
-        }
-    }
-
-    protected function afterUnrelateContacts(Entity $entity, $foreign, array $options = array())
-    {
-        if (!($foreign instanceof Entity)) return;
-
-        if ($foreign->get('accountId') && $foreign->get('accountId') === $entity->id) {
-            $foreign->set('accountId', null);
-            $this->getEntityManager()->saveEntity($foreign);
         }
     }
 }

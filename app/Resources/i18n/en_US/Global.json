@@ -74,12 +74,6 @@
         "Tasks": "Tasks"
     },
     "fields": {
-        "billingAddressCity": "City",
-        "billingAddressCountry": "Country",
-        "billingAddressPostalCode": "Postal Code",
-        "billingAddressState": "State",
-        "billingAddressStreet": "Street",
-        "billingAddressMap": "Map",
         "addressCity": "City",
         "addressStreet": "Street",
         "addressCountry": "Country",

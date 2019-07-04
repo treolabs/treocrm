@@ -46,7 +46,7 @@
         },
         "shippingAddress": {
             "type": "address",
-            "view": "crm:views/account/fields/shipping-address"
+            "view": "views/account/fields/shipping-address"
         },
         "shippingAddressStreet": {
             "type": "text",

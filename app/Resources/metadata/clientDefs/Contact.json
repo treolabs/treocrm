@@ -1,36 +1,11 @@
 {
-    "controller": "controllers/record",
     "aclPortal": "crm:acl-portal/contact",
     "views": {
         "detail": "crm:views/contact/detail"
     },
     "recordViews": {
-        "detail": "crm:views/contact/record/detail",
-        "detailQuick": "crm:views/contact/record/detail-small"
-    },
-    "defaultSidePanelFieldLists": {
-        "detail": [
-            {
-                "name": "assignedUser"
-            },
-            {
-                "name": "teams"
-            },
-            {
-                "name": "portalUser"
-            }
-        ],
-        "detailSmall": [
-            {
-                "name": "assignedUser"
-            },
-            {
-                "name": "teams"
-            },
-            {
-                "name": "portalUser"
-            }
-        ]
+        "detail": "views/contact/record/detail",
+        "detailQuick": "views/contact/record/detail-small"
     },
     "sidePanels": {
         "detail": [
@@ -89,35 +64,5 @@
             "layout": "listForTarget",
             "view": "crm:views/record/panels/target-lists"
         }
-    },
-    "boolFilterList": [
-        "onlyMy"
-    ],
-    "additionalLayouts": {
-        "detailConvert": {
-            "type": "detail"
-        },
-        "listForAccount": {
-            "type": "listSmall"
-        }
-    },
-    "filterList": [
-        "portalUsers"
-    ],
-    "dynamicLogic": {
-        "fields": {
-            "title": {
-                "visible": {
-                    "conditionGroup": [
-                        {
-                            "type": "isNotEmpty",
-                            "attribute": "accountId"
-                        }
-                    ]
-                }
-            }
-        }
-    },
-    "color": "#a4c5e0",
-    "iconClass": "fas fa-id-badge"
+    }
 }
