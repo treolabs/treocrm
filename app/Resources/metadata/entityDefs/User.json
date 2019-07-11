@@ -1,17 +1,5 @@
 {
   "fields": {
-    "contact": {
-      "type": "link",
-      "view": "views/user/fields/contact"
-    },
-    "accounts": {
-      "type": "linkMultiple"
-    },
-    "account": {
-      "type": "link",
-      "notStorable": true,
-      "readOnly": true
-    },
     "acceptanceStatusMeetings": {
       "type": "enum",
       "notStorable": true,
@@ -36,11 +24,6 @@
     }
   },
   "links": {
-    "contact": {
-      "type": "belongsTo",
-      "entity": "Contact",
-      "foreign": "portalUser"
-    },
     "targetLists": {
       "type": "hasMany",
       "entity": "TargetList",
@@ -51,12 +34,6 @@
       "notStorable": true,
       "readOnly": true,
       "disabled": true
-    },
-    "accounts": {
-      "type": "hasMany",
-      "entity": "Account",
-      "foreign": "portalUsers",
-      "relationName": "AccountPortalUser"
     },
     "meetings": {
       "type": "hasMany",

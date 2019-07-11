@@ -37,7 +37,7 @@ Espo.define('crm:views/portal-user/list', 'views/list', function (Dep) {
 
         actionCreate: function () {
 
-            this.createView('modal', 'crm:views/contact/modals/select-for-portal-user', {
+            this.createView('modal', 'views/contact/modals/select-for-portal-user', {
                 scope: 'Contact',
                 primaryFilterName: 'notPortalUsers',
                 createButton: false,

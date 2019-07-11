@@ -39,7 +39,7 @@ use \Espo\Core\Exceptions\Forbidden;
 
 use \Espo\ORM\Entity;
 
-class Lead extends \Crm\Core\Templates\Services\Person
+class Lead extends \Treo\Services\Person
 {
 
     protected function init()
