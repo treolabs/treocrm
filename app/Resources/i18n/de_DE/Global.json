@@ -84,26 +84,6 @@
     "Create Task": "Neue Aufgabe",
     "Tasks": "Aufgaben"
   },
-  "fields": {
-    "billingAddressCity": "Ort",
-    "addressCity": "Ort",
-    "billingAddressCountry": "Land",
-    "addressCountry": "Land",
-    "billingAddressPostalCode": "PLZ",
-    "addressPostalCode": "PLZ",
-    "billingAddressState": "Bundesland/Kanton",
-    "addressState": "Bundesland/Kanton",
-    "billingAddressStreet": "Straße",
-    "addressStreet": "Straße",
-    "billingAddressMap": "Karte",
-    "addressMap": "Karte",
-    "shippingAddressCity": "Ort (Lieferadresse)",
-    "shippingAddressStreet": "Straße (Lieferadresse)",
-    "shippingAddressCountry": "Land (Lieferadresse)",
-    "shippingAddressState": "Bundesland/Kanton (Versand)",
-    "shippingAddressPostalCode": "PLZ (Lieferadresse)",
-    "shippingAddressMap": "Karte (Lieferadresse)"
-  },
   "options": {
     "reminderTypes": {
       "Email": "E-Mail"
