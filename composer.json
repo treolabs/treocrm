@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "treolabs/treocore": "~3.20.0"
+    "treolabs/treocore": "~3.20.3"
   },
   "autoload": {
     "psr-4": {

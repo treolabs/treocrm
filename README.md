@@ -92,7 +92,10 @@ We are working on documentation. The current version is available [here](https:/
 
 ### Installation
 1. Install [TreoCore](https://github.com/treolabs/treocore#installation)
-2. Install TreoCrm module by module manager
+2. Install TreoCrm module by Composer UI or by running:
+   ```
+   composer require treo-module/treo-crm:*
+   ```
 
 ### License
 
