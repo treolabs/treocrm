@@ -49,6 +49,11 @@
             }
         ]
     },
+    "additionalLayouts": {
+        "detailConvert": {
+            "type": "detail"
+        }
+    },
     "relationshipPanels": {
         "campaignLogRecords": {
             "rowActionsView": "views/record/row-actions/empty",

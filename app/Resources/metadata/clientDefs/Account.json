@@ -56,5 +56,10 @@
          "layout": "listForTarget",
          "view": "crm:views/record/panels/target-lists"
       }
+   },
+   "additionalLayouts": {
+      "detailConvert": {
+         "type": "detail"
+      }
    }
 }
