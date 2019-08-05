@@ -34,21 +34,10 @@
 
 namespace Crm\SelectManagers;
 
-class Lead extends \Espo\Core\SelectManagers\Base
-{
-    protected function filterActive(&$result)
-    {
-        $result['whereClause'][] = array(
-            'status!=' => ['Converted', 'Recycled', 'Dead']
-        );
-    }
+use ActivitiesTasks\SelectManagers\Lead as LeadTask;
 
-    protected function filterActual(&$result)
-    {
-        $result['whereClause'][] = array(
-            'status!=' => ['Converted', 'Recycled', 'Dead']
-        );
-    }
+class Lead extends LeadTask
+{
 
     protected function filterConverted(&$result)
     {

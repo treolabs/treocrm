@@ -3,9 +3,6 @@
     "views":{
         "detail":"crm:views/lead/detail"
     },
-    "recordViews":{
-        "detail":"crm:views/lead/record/detail"
-    },
     "sidePanels":{
         "detail":[
             {
@@ -16,24 +13,6 @@
                 "hidden":true,
                 "style":"success",
                 "isForm": true
-            },
-            {
-                "name":"activities",
-                "label":"Activities",
-                "view":"crm:views/record/panels/activities",
-                "aclScope":"Activities"
-            },
-            {
-                "name":"history",
-                "label":"History",
-                "view":"crm:views/record/panels/history",
-                "aclScope":"Activities"
-            },
-            {
-                "name":"tasks",
-                "label":"Tasks",
-                "view":"crm:views/record/panels/tasks",
-                "aclScope":"Task"
             }
         ],
         "edit":[
@@ -56,24 +35,6 @@
                 "hidden":true,
                 "style":"success",
                 "isForm": true
-            },
-            {
-                "name":"activities",
-                "label":"Activities",
-                "view":"crm:views/record/panels/activities",
-                "aclScope":"Activities"
-            },
-            {
-                "name":"history",
-                "label":"History",
-                "view":"crm:views/record/panels/history",
-                "aclScope":"Activities"
-            },
-            {
-                "name":"tasks",
-                "label":"Tasks",
-                "view":"crm:views/record/panels/tasks",
-                "aclScope":"Task"
             }
         ],
         "editSmall":[
@@ -88,52 +49,26 @@
             }
         ]
     },
+  "filterList": [
+    {
+      "name": "converted",
+      "style": "success"
+    }
+  ],
     "relationshipPanels":{
-        "campaignLogRecords":{
-            "rowActionsView":"views/record/row-actions/empty",
-            "select":false,
-            "create":false
-        },
         "targetLists":{
             "create": false,
             "rowActionsView": "crm:views/record/row-actions/relationship-target",
             "layout": "listForTarget",
             "view": "crm:views/record/panels/target-lists"
-        }
+        },
+      "campaignLogRecords": {
+        "rowActionsView": "views/record/row-actions/empty",
+        "select": false,
+        "create": false
+      }
     },
-    "filterList":[
-        {
-            "name":"actual"
-        },
-        {
-            "name":"converted",
-            "style":"success"
-        }
-    ],
-    "boolFilterList":[
-        "onlyMy"
-    ],
     "dynamicLogic":{
-        "fields":{
-            "name":{
-                "required":{
-                    "conditionGroup":[
-                        {
-                            "type":"isEmpty",
-                            "attribute":"accountName"
-                        },
-                        {
-                            "type":"isEmpty",
-                            "attribute":"emailAddress"
-                        },
-                        {
-                            "type":"isEmpty",
-                            "attribute":"phoneNumber"
-                        }
-                    ]
-                }
-            }
-        },
         "panels": {
             "convertedTo": {
                 "visible": {
@@ -147,7 +82,5 @@
                 }
             }
         }
-    },
-    "color": "#d6a2c9",
-    "iconClass": "fas fa-address-card"
+    }
 }

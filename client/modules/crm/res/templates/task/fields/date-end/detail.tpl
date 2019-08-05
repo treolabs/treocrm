@@ -1,1 +1,0 @@
-{{#if dateValue}}<span{{#if isOverdue}} class="text-danger"{{/if}} title="{{dateValue}}">{{dateValue}}</span>{{/if}}

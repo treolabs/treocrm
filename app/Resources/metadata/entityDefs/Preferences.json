@@ -1,6 +1,6 @@
 {
   "defaultReminders": {
     "type": "jsonArray",
-    "view": "crm:views/meeting/fields/reminders"
+    "view": "activitiestasks:views/meeting/fields/reminders"
   }
 }

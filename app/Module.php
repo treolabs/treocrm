@@ -50,6 +50,6 @@ class Module extends AbstractModule
      */
     public static function getLoadOrder(): int
     {
-        return 100;
+        return 101;
     }
 }

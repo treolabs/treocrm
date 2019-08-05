@@ -1,28 +1,4 @@
 {
-  "fields": {
-    "acceptanceStatusMeetings": {
-      "type": "enum",
-      "notStorable": true,
-      "layoutListDisabled": true,
-      "layoutDetailDisabled": true,
-      "layoutMassUpdateDisabled": true,
-      "exportDisabled": true,
-      "view": "crm:views/lead/fields/acceptance-status",
-      "link": "meetings",
-      "column": "status"
-    },
-    "acceptanceStatusCalls": {
-      "type": "enum",
-      "notStorable": true,
-      "layoutListDisabled": true,
-      "layoutDetailDisabled": true,
-      "layoutMassUpdateDisabled": true,
-      "exportDisabled": true,
-      "view": "crm:views/lead/fields/acceptance-status",
-      "link": "calls",
-      "column": "status"
-    }
-  },
   "links": {
     "targetLists": {
       "type": "hasMany",
@@ -34,21 +10,6 @@
       "notStorable": true,
       "readOnly": true,
       "disabled": true
-    },
-    "meetings": {
-      "type": "hasMany",
-      "entity": "Meeting",
-      "foreign": "users"
-    },
-    "calls": {
-      "type": "hasMany",
-      "entity": "Call",
-      "foreign": "users"
-    },
-    "tasks": {
-      "type": "hasMany",
-      "entity": "Task",
-      "foreign": "assignedUser"
     }
   }
 }
