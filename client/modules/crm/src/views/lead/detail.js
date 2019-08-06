@@ -31,7 +31,7 @@
  * and "TreoCrm" word.
  */
 
-Espo.define('Crm:Views.Lead.Detail', 'Views.Detail', function (Dep) {
+Espo.define('crm:views/lead/detail', 'views/detail', function (Dep) {
 
     return Dep.extend({
 

@@ -31,7 +31,7 @@
  * and "TreoCrm" word.
  */
 
-Espo.define('crm:views/user/record/panels/tasks', 'crm:views/record/panels/tasks', function (Dep) {
+Espo.define('crm:views/user/record/panels/tasks', 'activitiestasks:views/record/panels/tasks', function (Dep) {
 
     return Dep.extend({
 

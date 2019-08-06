@@ -46,7 +46,7 @@
         "reminders": {
             "type": "jsonArray",
             "notStorable": true,
-            "view": "crm:views/meeting/fields/reminders",
+            "view": "activitiestasks:views/meeting/fields/reminders",
             "layoutListDisabled": true
         },
         "createdAt": {

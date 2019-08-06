@@ -45,7 +45,7 @@
             "layoutDetailDisabled": true,
             "layoutMassUpdateDisabled": true,
             "exportDisabled": true,
-            "view": "crm:views/lead/fields/acceptance-status",
+            "view": "activitiestasks:views/lead/fields/acceptance-status",
             "link": "meetings",
             "column": "status"
         },
@@ -56,7 +56,7 @@
             "layoutDetailDisabled": true,
             "layoutMassUpdateDisabled": true,
             "exportDisabled": true,
-            "view": "crm:views/lead/fields/acceptance-status",
+            "view": "activitiestasks:views/lead/fields/acceptance-status",
             "link": "calls",
             "column": "status"
         },
