@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "treolabs/treocore": "~3.21.0",
+    "treolabs/treocore": "~3.22.0",
     "treo-module/activitiestasks": "~1.10.0"
   },
   "autoload": {
