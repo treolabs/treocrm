@@ -16,44 +16,6 @@
             "foreign": "accounts",
             "audited": true
         },
-        "meetingsPrimary": {
-            "type": "hasMany",
-            "entity": "Meeting",
-            "foreign": "account",
-            "layoutRelationshipsDisabled": true
-        },
-        "callsPrimary": {
-            "type": "hasMany",
-            "entity": "Call",
-            "foreign": "account",
-            "layoutRelationshipsDisabled": true
-        },
-        "tasksPrimary": {
-            "type": "hasMany",
-            "entity": "Task",
-            "foreign": "account",
-            "layoutRelationshipsDisabled": true
-        },
-        "meetings": {
-            "type": "hasChildren",
-            "entity": "Meeting",
-            "foreign": "parent",
-            "layoutRelationshipsDisabled": true,
-            "audited": true
-        },
-        "calls": {
-            "type": "hasChildren",
-            "entity": "Call",
-            "foreign": "parent",
-            "layoutRelationshipsDisabled": true,
-            "audited": true
-        },
-        "tasks": {
-            "type": "hasChildren",
-            "entity": "Task",
-            "foreign": "parent",
-            "layoutRelationshipsDisabled": true
-        },
         "campaign": {
             "type": "belongsTo",
             "entity": "Campaign",
@@ -69,11 +31,6 @@
             "type": "hasMany",
             "entity": "TargetList",
             "foreign": "accounts"
-        },
-        "originalLead": {
-            "type": "hasOne",
-            "entity": "Lead",
-            "foreign": "createdAccount"
         }
     }
 }
