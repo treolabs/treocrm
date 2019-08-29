@@ -243,7 +243,6 @@ class TargetList extends \Espo\Services\Record
         }
         if ($sql) {
             if ($pdo->query($sql)) {
-                $this->getInjection('hookManager')->process('TargetList', 'afterUnlinkAll', $entity, array(), array('link' => $link));
                 return true;
             }
         }
@@ -353,7 +352,6 @@ class TargetList extends \Espo\Services\Record
                'targetType' => $targetType
             ];
 
-            $this->getInjection('hookManager')->process('TargetList', 'afterOptOut', $targetList, [], $hookData);
             return true;
         }
         return false;
@@ -392,7 +390,6 @@ class TargetList extends \Espo\Services\Record
                'targetType' => $targetType
             ];
 
-            $this->getInjection('hookManager')->process('TargetList', 'afterCancelOptOut', $targetList, [], $hookData);
             return true;
         }
         return false;
