@@ -2,7 +2,7 @@
     "fields": {
         "parent": {
             "type": "linkParent",
-            "entityList": ["Opportunity", "Case"]
+            "entityList": ["Account", "Contact", "Lead","Opportunity", "Case"]
         }
     }
 }
