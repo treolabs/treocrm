@@ -11,7 +11,7 @@
   ],
   "require": {
     "treolabs/treocore": "~3.23.0",
-    "treolabs/activitiestasks": "~1.10.2"
+    "treolabs/activities-tasks": "~1.10.2"
   },
   "autoload": {
     "psr-4": {
