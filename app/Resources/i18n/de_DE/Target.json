@@ -1,0 +1,8 @@
+{
+  "fields": {
+    "accountName": "Firmenname",
+    "title": "Funktion",
+    "doNotCall": "Anrufe unerwünscht",
+    "website": "Webseite"
+  }
+}
