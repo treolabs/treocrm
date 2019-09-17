@@ -10,8 +10,8 @@
     }
   ],
   "require": {
-    "treolabs/treocore": "~3.22.0",
-    "treolabs/activities-tasks": "~1.10.0"
+    "treolabs/treocore": "~3.23.0",
+    "treolabs/activities-tasks": "~1.10.2"
   },
   "autoload": {
     "psr-4": {
