@@ -3,12 +3,6 @@
   "description": "TreoCRM",
   "homepage": "https://treolabs.com",
   "license": "GPL-3.0-only",
-  "authors": [
-    {
-      "name": "Roman Ratsun",
-      "email": "r.ratsun@treolabs.com"
-    }
-  ],
   "require": {
     "treolabs/treocore": "~3.23.0",
     "treolabs/activities-tasks": "~1.10.2"
