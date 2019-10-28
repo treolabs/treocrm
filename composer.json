@@ -9,7 +9,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Crm\\": "app/"
+      "Crm\\": "app/",
+      "Espo\\Modules\\Crm\\": "Espo/Modules/Crm/"
     }
   },
   "extra": {
