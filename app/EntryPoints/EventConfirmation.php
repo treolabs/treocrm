@@ -41,7 +41,7 @@ use \Espo\Core\Exceptions\Forbidden;
 use \Espo\Core\Exceptions\BadRequest;
 use \Espo\Core\Exceptions\Error;
 
-class EventConfirmation extends \Espo\Core\EntryPoints\Base
+class EventConfirmation extends \Treo\Core\EntryPoints\AbstractEntryPoint
 {
     public static $authRequired = false;
 
