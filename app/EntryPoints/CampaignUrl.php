@@ -41,7 +41,7 @@ use \Espo\Core\Exceptions\Forbidden;
 use \Espo\Core\Exceptions\BadRequest;
 use \Espo\Core\Exceptions\Error;
 
-class CampaignUrl extends \Espo\Core\EntryPoints\Base
+class CampaignUrl extends \Treo\Core\EntryPoints\AbstractEntryPoint
 {
     public static $authRequired = false;
 
